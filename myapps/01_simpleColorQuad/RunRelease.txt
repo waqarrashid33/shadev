@@ -1,0 +1,76 @@
+OUTPUT OF MAKE RUNRELEASE WHEN OPENGL DRIVER 2 IS SELECTED AND VC4-FKMS-V3D OVERLAY IS COMMNETD IN CONFIG.TXT
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): screenRect: 1280x1024
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): windowRect: 1024x768
+[notice ] ofAppEGLWindow: createSurface(): setting up EGL Display
+[notice ] ofAppEGLWindow: createSurface(): EGL Display correctly set 0x1
+[notice ] ofAppEGLWindow: createSurface(): no current renderer selected
+[notice ] ofAppEGLWindow: createSurface(): default renderer detected
+[notice ] ofAppEGLWindow: createSurface(): surface created correctly
+[notice ] ofAppEGLWindow: createSurface(): API bound correctly
+[notice ] ofAppEGLWindow: createSurface(): -----EGL-----
+[notice ] ofAppEGLWindow: createSurface(): EGL_VERSION_MAJOR = 1
+[notice ] ofAppEGLWindow: createSurface(): EGL_VERSION_MINOR = 4
+[notice ] ofAppEGLWindow: createSurface(): EGL_CLIENT_APIS = OpenGL_ES OpenVG
+[notice ] ofAppEGLWindow: createSurface(): EGL_VENDOR = Broadcom
+[notice ] ofAppEGLWindow: createSurface(): EGL_VERSION = 1.4
+[notice ] ofAppEGLWindow: createSurface(): EGL_EXTENSIONS = EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_KHR_vg_parent_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_lock_surface 
+[notice ] ofAppEGLWindow: createSurface(): GL_RENDERER = VideoCore IV HW
+[notice ] ofAppEGLWindow: createSurface(): GL_VERSION  = OpenGL ES-CM 1.1
+[notice ] ofAppEGLWindow: createSurface(): GL_VENDOR   = Broadcom
+[notice ] ofAppEGLWindow: createSurface(): -------------
+[notice ] ofAppEGLWindow: setupPeripherals(): peripheral setup complete
+[notice ] ofAppEGLWindow: setupNativeUDev(): created udev object
+[notice ] ofAppEGLWindow: setupMouse(): mouse_fd= 5 devicePath=/dev/input/by-path/platform-3f980000.usb-usb-0:1.2:1.0-event-mouse
+[notice ] ofAppEGLWindow: setupMouse(): mouse device name = DELL Laser Mouse
+[notice ] ofAppEGLWindow: setupKeyboard(): keyboard_fd= 6 devicePath=/dev/input/by-path/platform-3f980000.usb-usb-0:1.4:1.0-event-kbd
+[notice ] ofAppEGLWindow: setupKeyboard(): keyboard device name = DELL Dell QuietKey Keyboard
+[notice ] ofAppEGLWindow: setupPeripherals(): native event setup complete
+[ error ] ofShader: sorry, it looks like you can't run 'ARB_shader_objects'
+[ error ] ofShader: please check the capabilites of your graphics card: http://www.ozone3d.net/gpu_caps_viewer
+[ error ] ofShader: setupShaderFromSource(): failed creating GL_VERTEX_SHADER shader
+[ error ] ofShader: sorry, it looks like you can't run 'ARB_shader_objects'
+[ error ] ofShader: please check the capabilites of your graphics card: http://www.ozone3d.net/gpu_caps_viewer
+[ error ] ofShader: setupShaderFromSource(): failed creating GL_FRAGMENT_SHADER shader
+[ error ] ofShader: linkProgram(): trying to link GLSL program, but no shaders created yet
+[notice ] ofAppEGLWindow: destroyNativeKeyboard()
+[notice ] ofAppEGLWindow: destroySurface(): destroying EGL surface
+/home/pi/openFrameworks/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk:176: recipe for target 'RunRelease' failed
+make: *** [RunRelease] Interrupt
+\n\n\nCHANGES FROM LAST RUN\nCHANGING GL DRIVER TO DRIVER ONE
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+[ error ] ofAppEGLWindow: getScreenSize(): tried to get display size but failed
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): screenRect: 0x0
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): windowRect: 0x0
+[ error ] ofAppEGLWindow: setupRPiNativeWindow(): dispman_element == DISPMANX_INVALID
+[warning] ofAppEGLWindow: getNativeDisplay(): window not initialized, returning NULL
+[warning] ofAppEGLWindow: getNativeDisplay(): window not initialized, returning NULL
+[notice ] ofAppEGLWindow: createSurface(): setting up EGL Display
+* failed to add service - already in use?
+/home/pi/openFrameworks/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk:176: recipe for target 'RunRelease' failed
+make: *** [RunRelease] Error 1
+\n\n\nCHANGES FROM LAST RUN\nCHANGING GL DRIVER TO DRIVER THREE
+After making changes according to issue5056 in of OF github and then running it on G1 GL (full kms)
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+[ error ] ofAppEGLWindow: getScreenSize(): tried to get display size but failed
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): screenRect: 0x0
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): windowRect: 0x0
+[ error ] ofAppEGLWindow: setupRPiNativeWindow(): dispman_element == DISPMANX_INVALID
+[warning] ofAppEGLWindow: getNativeDisplay(): window not initialized, returning NULL
+[warning] ofAppEGLWindow: getNativeDisplay(): window not initialized, returning NULL
+[notice ] ofAppEGLWindow: createSurface(): setting up EGL Display
+* failed to add service - already in use?
+/home/pi/openFrameworks/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk:176: recipe for target 'RunRelease' failed
+make: *** [RunRelease] Error 1
+After making changes according to issue5056 in of OF github and then running it on G2 GL (fake kms)
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): screenRect: 1280x1024
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): windowRect: 1024x768
+[notice ] ofAppEGLWindow: createSurface(): setting up EGL Display
+* failed to add service - already in use?
+/home/pi/openFrameworks/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk:176: recipe for target 'RunRelease' failed
+make: *** [RunRelease] Error 1

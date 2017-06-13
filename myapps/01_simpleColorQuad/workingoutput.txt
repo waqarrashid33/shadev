@@ -1,0 +1,82 @@
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): screenRect: 1280x1024
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): windowRect: 1024x768
+[notice ] ofAppEGLWindow: createSurface(): setting up EGL Display
+[notice ] ofAppEGLWindow: createSurface(): EGL Display correctly set 0x1
+[notice ] ofAppEGLWindow: createSurface(): no current renderer selected
+[notice ] ofAppEGLWindow: createSurface(): GLES2 renderer detected
+[notice ] ofAppEGLWindow: createSurface(): surface created correctly
+[notice ] ofAppEGLWindow: createSurface(): API bound correctly
+[notice ] ofAppEGLWindow: createSurface(): -----EGL-----
+[notice ] ofAppEGLWindow: createSurface(): EGL_VERSION_MAJOR = 1
+[notice ] ofAppEGLWindow: createSurface(): EGL_VERSION_MINOR = 4
+[notice ] ofAppEGLWindow: createSurface(): EGL_CLIENT_APIS = OpenGL_ES OpenVG
+[notice ] ofAppEGLWindow: createSurface(): EGL_VENDOR = Broadcom
+[notice ] ofAppEGLWindow: createSurface(): EGL_VERSION = 1.4
+[notice ] ofAppEGLWindow: createSurface(): EGL_EXTENSIONS = EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_KHR_vg_parent_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_lock_surface 
+[notice ] ofAppEGLWindow: createSurface(): GL_RENDERER = VideoCore IV HW
+[notice ] ofAppEGLWindow: createSurface(): GL_VERSION  = OpenGL ES 2.0
+[notice ] ofAppEGLWindow: createSurface(): GL_VENDOR   = Broadcom
+[notice ] ofAppEGLWindow: createSurface(): -------------
+[notice ] ofAppEGLWindow: setupPeripherals(): peripheral setup complete
+[notice ] ofAppEGLWindow: setupNativeUDev(): created udev object
+[notice ] ofAppEGLWindow: setupMouse(): mouse_fd= 5 devicePath=/dev/input/by-path/platform-3f980000.usb-usb-0:1.2:1.0-event-mouse
+[notice ] ofAppEGLWindow: setupMouse(): mouse device name = DELL Laser Mouse
+[notice ] ofAppEGLWindow: setupKeyboard(): keyboard_fd= 6 devicePath=/dev/input/by-path/platform-3f980000.usb-usb-0:1.4:1.0-event-kbd
+[notice ] ofAppEGLWindow: setupKeyboard(): keyboard device name = DELL Dell QuietKey Keyboard
+[notice ] ofAppEGLWindow: setupPeripherals(): native event setup complete
+[warning] ofShader: GL_VERTEX_SHADER shader reports:
+Compiled
+[warning] precision mediump float;
+#define IN attribute
+#define OUT varying
+#define TEXTURE texture2D
+#define TARGET_OPENGLES
+uniform mat4 modelViewMatrix; uniform mat4 projectionMatrix; uniform mat4 textureMatrix; uniform mat4 modelViewProjectionMatrix; uniform float usingTexture; uniform float usingColors; uniform vec4 globalColor; IN vec4 position; IN vec4 color; IN vec4 normal; IN vec2 texcoord; OUT vec4 colorVarying; OUT vec2 texCoordVarying; void main(){ gl_Position = modelViewProjectionMatrix * position; if(usingTexture>.5) texCoordVarying = (textureMatrix*vec4(texcoord.x,texcoord.y,0,1)).xy; if(usingColors>.5) colorVarying = color; else colorVarying = globalColor; }
+
+[warning] ofShader: GL_FRAGMENT_SHADER shader reports:
+Compiled
+[warning] precision mediump float;
+#define IN varying
+#define OUT
+#define TEXTURE texture2D
+#define FRAG_COLOR gl_FragColor
+#define TARGET_OPENGLES
+uniform sampler2D src_tex_unit0; uniform float usingTexture; uniform float bitmapText; IN vec4 colorVarying; IN vec2 texCoordVarying; void main(){ vec4 tex; if(usingTexture>.5){ tex = TEXTURE(src_tex_unit0, texCoordVarying); if(bitmapText>.5 && tex.a < 0.5){ discard; }else{ FRAG_COLOR = colorVarying*tex; } }else{ FRAG_COLOR = colorVarying; } }
+
+[warning] ofShader: GL_VERTEX_SHADER shader reports:
+Compiled
+[warning] attribute vec4 position;
+
+uniform mat4 modelViewProjectionMatrix;
+
+void main(){
+	gl_Position = modelViewProjectionMatrix * position;
+}
+
+[warning] ofShader: GL_FRAGMENT_SHADER shader reports:
+Compiled
+[warning] 
+precision highp float;
+
+void main()
+{
+    // gl_FragCoord contains the window relative coordinate for the fragment.
+    // we use gl_FragCoord.x position to control the red color value.
+    // we use gl_FragCoord.y position to control the green color value.
+    // please note that all r, g, b, a values are between 0 and 1.
+    
+    float windowWidth = 1024.0;
+    float windowHeight = 768.0;
+    
+	float r = gl_FragCoord.x / windowWidth;
+	float g = gl_FragCoord.y / windowHeight;
+	float b = 1.0;
+	float a = 1.0;
+	gl_FragColor = vec4(r, g, b, a);
+}
+
+[notice ] ofAppEGLWindow: destroyNativeKeyboard()
+[notice ] ofAppEGLWindow: destroySurface(): destroying EGL surface
+/home/pi/openFrameworks/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk:176: recipe for target 'RunRelease' failed

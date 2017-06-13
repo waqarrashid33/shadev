@@ -1,0 +1,35 @@
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+Compiling OF library for Release
+make[1]: Entering directory '/home/pi/openFrameworks/libs/openFrameworksCompiled/project'
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+Done!
+make[1]: Leaving directory '/home/pi/openFrameworks/libs/openFrameworksCompiled/project'
+
+
+Compiling 01_simpleColorQuad for Release
+make[1]: Entering directory '/home/pi/openFrameworks/examples/shader/01_simpleColorQuad'
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+make[2]: Entering directory '/home/pi/openFrameworks/examples/shader/01_simpleColorQuad'
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+
+     compiling done
+     to launch the application
+
+     cd bin
+     ./01_simpleColorQuad
+     
+     - or -
+     
+     make RunRelease
+
+
+make[2]: Leaving directory '/home/pi/openFrameworks/examples/shader/01_simpleColorQuad'
+make[1]: Leaving directory '/home/pi/openFrameworks/examples/shader/01_simpleColorQuad'

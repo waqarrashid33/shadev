@@ -1,0 +1,7 @@
+HOST_OS=Linux
+checking pkg-config libraries:   cairo zlib gstreamer-app-1.0 gstreamer-1.0 gstreamer-video-1.0 gstreamer-base-1.0 libudev freetype2 fontconfig sndfile openal openssl gtk+-3.0 
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): screenRect: 1280x1024
+[notice ] ofAppEGLWindow: setupRPiNativeWindow(): windowRect: 1024x768
+[notice ] ofAppEGLWindow: createSurface(): setting up EGL Display
+/home/pi/openFrameworks/libs/openFrameworksCompiled/project/makefileCommon/compile.project.mk:176: recipe for target 'RunRelease' failed
+\n\n\nCHANGES FROM LAST RUN\nCHANGING GL DRIVER TO DRIVER ONE
