@@ -25,3 +25,15 @@ http://www.glfw.org/docs/latest/context_guide.html#context_offscreen
 
 
 https://tinkerboarding.co.uk/forum/index.php
+
+
+
+# EGL changes
+## TODO:
+1. Test EGL on tinkerboard to see if its working. Just download some examples from internte and try to run them.
+
+2. Porting glslViewer to EGL:
+## App.cpp
+It Contains void initGL (glm::ivec4 &_viewport, bool _headless), and then it has two sections, one for raspberry pi which seems to be using egl and one for OSX or Linux which is using GLFW.
+
+The raspberry pi part will be very useful in converting the GLFW part to EGL or writing its own.
