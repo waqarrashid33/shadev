@@ -31,6 +31,9 @@ https://tinkerboarding.co.uk/forum/index.php
 # EGL changes
 ## TODO:
 1. Test EGL on tinkerboard to see if its working. Just download some examples from internte and try to run them.
+  a. native_window = createnNativeWindow() seems to be a library function. Used in example
+  b. In raspberry pi part of code, they had done this manually using vc related libraries
+  c. Find the corresponding function which enables us to write to framebuffer directly or learn how to do it manually like rpi
 
 2. Porting glslViewer to EGL:
 ## App.cpp
